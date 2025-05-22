@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Get a Quote | Car Services</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .quote-form {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.08);
+      padding: 30px;
+    }
+    .form-control:focus {
+      border-color: #dc3545;
+      box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+    }
+    .form-label {
+      font-weight: 500;
+      color: #343a40;
+    }
+    .btn-primary {
+      background-color: #dc3545;
+      border-color: #dc3545;
+    }
+    .btn-primary:hover {
+      background-color: #bd2130;
+      border-color: #bd2130;
+    }
+    .icon-red {
+      color: #dc3545;
+    }
+    .btn i {
+      transition: transform 0.3s ease;
+    }
+    .btn:hover i {
+      transform: translateX(4px);
+    }
+    .back-btn {
+      margin-top: 20px;
+      display: inline-block;
+    }
+    .back-btn a {
+      text-decoration: none;
+      color: #fff;
+      background-color: #dc3545;
+      padding: 8px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    .back-btn a:hover {
+      background-color: #bd2130;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container py-4">
+    <!-- Back Home Button -->
+    <div class="back-btn" data-aos="fade-right">
+      <a href="index.html">
+        <i class="fas fa-arrow-left me-2"></i>Back to Home
+      </a>
+    </div>
+
+    <div class="text-center my-4">
+      <h2 data-aos="fade-down"><i class="fas fa-quote-left icon-red me-2"></i>Request a Quote</h2>
+      <p data-aos="fade-up" class="text-muted">Let us know your needs and we’ll get back to you with a custom offer.</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <form class="quote-form" data-aos="zoom-in">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" id="name" class="form-control" placeholder="John Doe" required />
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" id="email" class="form-control" placeholder="you@example.com" required />
+            </div>
+            <div class="col-md-6">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" id="phone" class="form-control" placeholder="+254 712 345678" required />
+            </div>
+            <div class="col-md-6">
+              <label for="service" class="form-label">Service Interested In</label>
+              <select id="service" class="form-select" required>
+                <option value="" disabled selected>Select Service</option>
+                <option>Car Rental</option>
+                <option>Vehicle Purchase</option>
+                <option>Auto Repair</option>
+                <option>Fleet Services</option>
+                <option>Insurance Support</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <label for="message" class="form-label">Additional Information</label>
+              <textarea id="message" class="form-control" rows="4" placeholder="Let us know more about your request..."></textarea>
+            </div>
+            <div class="col-12 text-center mt-3">
+              <button type="submit" class="btn btn-primary px-5 py-2">
+                Submit Request <i class="fas fa-paper-plane ms-2 icon-red"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
+
+  <!-- Bootstrap Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
